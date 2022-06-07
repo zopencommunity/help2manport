@@ -8,10 +8,7 @@ if ! [ -f ./setenv.sh ]; then
 fi
 
 export PORT_ROOT="${PWD}"
-unset PORT_TARBALL
-unset PORT_GIT
-#export PORT_TARBALL="Y"
-export PORT_GIT="Y"
+export PORT_TYPE="GIT"
 export PORT_TARBALL_URL="https://ftp.gnu.org/gnu/help2man/help2man-1.49.2.tar.xz"
 export PORT_TARBALL_DEPS="curl xz make m4 perl autoconf"
 
