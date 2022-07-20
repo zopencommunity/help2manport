@@ -10,6 +10,6 @@ node('linux')
         }
 
         stage('Build') {
-                build job: 'Port-Pipeline', parameters: [string(name: 'REPO', value: 'help2manport'), string(name: 'DESCRIPTION', value: 'help2man is a tool for automatically generating simple manual pages from program output.' )]
+                build job: 'Port-Pipeline', parameters: [string(name: 'PORT_GITHUB_REPO', value: 'help2manport'), string(name: 'PORT_DESCRIPTION', value: 'help2man is a tool for automatically generating simple manual pages from program output.' )]
         }
 }
