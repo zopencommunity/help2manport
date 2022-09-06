@@ -11,3 +11,9 @@ export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake xz"
 
 export ZOPEN_EXTRA_CFLAGS=""
 export ZOPEN_EXTRA_LDFLAGS=""
+
+zopen_check_results()
+{
+  return 3 # non-functional
+}
+
