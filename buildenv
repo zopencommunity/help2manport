@@ -1,4 +1,3 @@
-#!/bin/sh
 #
 # Set up environment variables for general build tool to operate
 #
@@ -11,6 +10,7 @@ export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake xz"
 
 export ZOPEN_EXTRA_CFLAGS=""
 export ZOPEN_EXTRA_LDFLAGS=""
+export ZOPEN_CHECK="skip"
 
 zopen_check_results()
 {
