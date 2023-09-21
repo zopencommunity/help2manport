@@ -1,13 +1,14 @@
 #
 # Set up environment variables for general build tool to operate
 #
-export ZOPEN_TYPE="TARBALL"
+export ZOPEN_BUILD_LINE="STABLE"
 export HELP2MAN_VERSION="1.49.2"
-export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/help2man/help2man-$HELP2MAN_VERSION.tar.xz"
-export ZOPEN_TARBALL_DEPS="curl xz make m4 perl autoconf"
+export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/help2man/help2man-$HELP2MAN_VERSION.tar.xz"
+export ZOPEN_STABLE_DEPS="curl xz make m4 perl autoconf"
 
-export ZOPEN_GIT_URL="https://salsa.debian.org/bod/help2man.git"
-export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake xz"
+export ZOPEN_DEV_URL="https://salsa.debian.org/bod/help2man.git"
+export ZOPEN_DEV_DEPS="git make m4 perl autoconf automake xz"
+export ZOPEN_RUNTIME_DEPS="perl m4"
 
 export ZOPEN_CHECK="./help2man"
 export ZOPEN_CHECK_OPTS="--version"
@@ -27,3 +28,7 @@ expectedFailures:0
 ZZ
 }
 
+zopen_get_version()
+{
+  ./help2man --version | head -1 | awk '{print $3; }'
+}
