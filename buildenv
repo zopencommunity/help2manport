@@ -1,9 +1,8 @@
-#
-# Set up environment variables for general build tool to operate
-#
-export ZOPEN_BUILD_LINE="STABLE"
+# bump: help2man-version /HELP2MAN_VERSION="(.*)"/ https://ftp.gnu.org/gnu/help2man/|re:/href="help2man-([\d.]+).tar.xz"/$1/|semver:*
 export HELP2MAN_VERSION="1.49.2"
-export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/help2man/help2man-$HELP2MAN_VERSION.tar.xz"
+
+export ZOPEN_BUILD_LINE="STABLE"
+export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/help2man/help2man-${HELP2MAN_VERSION}.tar.xz"
 export ZOPEN_STABLE_DEPS="curl xz make m4 perl autoconf"
 
 export ZOPEN_DEV_URL="https://salsa.debian.org/bod/help2man.git"
